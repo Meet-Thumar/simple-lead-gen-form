@@ -7,11 +7,14 @@ Text Domain: simple-lead-gen-form
 Domain Path: /languages
 */
 
+if( !defined( 'SIMPLE_LEAD_DIR_NAME') ){
+    define('SIMPLE_LEAD_DIR_NAME', dirname(plugin_basename(__FILE__)));
+}
 if( !defined( 'SIMPLE_LEAD_GEN_FORM_DIR' ) ){
-    define('SIMPLE_LEAD_GEN_FORM_DIR',WP_PLUGIN_DIR.'/simple-lead-gen-form');
+    define('SIMPLE_LEAD_GEN_FORM_DIR',WP_PLUGIN_DIR.'/'.SIMPLE_LEAD_DIR_NAME);
 }
 if( !defined( 'SIMPLE_LEAD_GEN_FORM_URL' ) ){
-    define('SIMPLE_LEAD_GEN_FORM_URL',WP_PLUGIN_URL.'/simple-lead-gen-form');
+    define('SIMPLE_LEAD_GEN_FORM_URL',WP_PLUGIN_URL.'/'.SIMPLE_LEAD_DIR_NAME);
 }
 if( !defined( 'SIMPLE_LEAD_GEN_FORM_CORE' ) ){
     define('SIMPLE_LEAD_GEN_FORM_CORE',SIMPLE_LEAD_GEN_FORM_DIR.'/core');
